@@ -40,14 +40,16 @@ class ArticleController extends AbstractController
      */
     public function show(Article $article, SlackClient $slack)
     {
-        if ($article->getSlug() === 'khaaaaaan') {
-            $slack->sendMessage('Kahn', 'Ah, Kirk, my old friend...');
-        }
-
+        $slack->sendMessage('Projektanci', 'Uzylismy to api w jakis sposob');
         return $this->render('article/show.html.twig', [
             'article' => $article,
         ]);
     }
+
+    /**
+     * @Route("/page/{slug}", name="page_show")
+     */
+
 
     /**
      * @Route("/news/{slug}/heart", name="article_toggle_heart", methods={"POST"})

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="glowna">
+        <div class="container">
+            <div class="header col-sm-12 ">
+        <center><img src="{{ asset('images/naglowek1.png') }}" class="img-fluid" /></center>
+            </div>
+
+        <div class="row">
+            <main>
+                <article class="posty col-sm-12">
+                    {% block content_text %}{% endblock %}
+                </article>
+            </main>
+        </div>
+    </div>
+{% endblock %}

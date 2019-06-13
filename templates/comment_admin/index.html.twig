@@ -4,7 +4,7 @@
 
 {% block content_class %}{{ parent() }} show-article-container-border-green{% endblock %}
 
-{% block content_body %}
+{% block content_text %}
     <div class="row">
         <div class="col-sm-12">
             <h1>Manage Comments ({{ pagination.getTotalItemCount }})</h1>
@@ -35,7 +35,9 @@
                     <th>Created</th>
                 </tr>
                 </thead>
-                <tbody>
+
+                <div class="cosik">
+                    <tbody>
                 {% for comment in pagination %}
                     <tr>
                         <td>
@@ -61,6 +63,7 @@
                     </tr>
                 {% endfor %}
                 </tbody>
+                </div>
             </table>
 
             {{ knp_pagination_render(pagination) }}
